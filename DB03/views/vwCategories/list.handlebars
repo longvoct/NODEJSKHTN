@@ -1,0 +1,45 @@
+<div class="card">
+  {{#if this.empty}}
+    <h4>Not available</h4>
+  {{else}}
+    <div class="card-header">
+      <h4>Categories</h4>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" class="text-center">#</th>
+          <th scope="col">Categories</th>
+          <th scope="col">&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each this.categories}}
+          <tr>
+            <th scope="row" class="text-center">{{CatID}}</th>
+            <td>{{CatName}}</td>
+            <td class="text-end">
+              <a
+                name=""
+                id=""
+                class="btn btn-primary btn-sm"
+                href="javascript"
+                role="button"
+              ><i class="fa fa-pencil" aria-hidden="true"></i></a>
+              <a
+                name=""
+                id=""
+                class="btn btn-danger btn-sm"
+                href="javascript"
+                role="button"
+              ><i class="fa fa-trash" aria-hidden="true"></i></a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <div class="card-footer text-muted">
+      Footer
+    </div>
+  {{/if}}
+</div>
